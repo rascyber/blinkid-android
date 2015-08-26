@@ -232,38 +232,50 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/microblink/results/ocr/OcrResult.html" title="class in com.microblink.results.ocr">OcrResult</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getOcrResult()">getOcrResult</a></strong>()</code>
+<div class="block">Returns the raw OCR result that was used for parsing data.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getOpt1()">getOpt1</a></strong>()</code>
 <div class="block">Returns first optional data.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getOpt2()">getOpt2</a></strong>()</code>
 <div class="block">Returns second optional data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getPrimaryId()">getPrimaryId</a></strong>()</code>
 <div class="block">Returns the primary indentifier.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getSecondaryId()">getSecondaryId</a></strong>()</code>
 <div class="block">Returns the secondary identifier.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getSex()">getSex</a></strong>()</code>
 <div class="block">Returns sex of the card holder.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getTitle()">getTitle</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#isMRZParsed()">isMRZParsed</a></strong>()</code>
+<div class="block">Returns true if Machine Readable Zone has been parsed, false otherwise.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -480,8 +492,36 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <h4>getMRZText</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getMRZText()</pre>
 <div class="block">Returns the entire Machine Readable Zone text from ID. This text is usually used for parsing
- other elements.</div>
+ other elements.
+ NOTE: This string is available only if OCR result was parsed successfully. If you are just
+ interested in obtaining raw OCR result (which may contain characters before and after MRZ line),
+ use method getOcrResult().</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the entire Machine Readable Zone text from ID.</dd></dl>
+</li>
+</ul>
+<a name="getOcrResult()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOcrResult</h4>
+<pre>public&nbsp;<a href="../../../../../com/microblink/results/ocr/OcrResult.html" title="class in com.microblink.results.ocr">OcrResult</a>&nbsp;getOcrResult()</pre>
+<div class="block">Returns the raw OCR result that was used for parsing data. Depending on settings, this field
+ might exist even if other fields are empty.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the raw OCR result that was used for parsing data.</dd></dl>
+</li>
+</ul>
+<a name="isMRZParsed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMRZParsed</h4>
+<pre>public&nbsp;boolean&nbsp;isMRZParsed()</pre>
+<div class="block">Returns true if Machine Readable Zone has been parsed, false otherwise.
+ If Machine Readable Zone has not been parsed, you can still obtain OCR result
+ with getOcrResult() and attempt to parse it yourself.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if Machine Readable Zone has been parsed, false otherwise.</dd></dl>
 </li>
 </ul>
 <a name="getTitle()">

@@ -189,14 +189,38 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#areUnparsedResultsAllowed()">areUnparsedResultsAllowed</a></strong>()</code>
+<div class="block">Returns true if returning of results that have failed to parse data is allowed.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#describeContents()">describeContents</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/microblink/geometry/Rectangle.html" title="class in com.microblink.geometry">Rectangle</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#getMRZRegion()">getMRZRegion</a></strong>()</code>
 <div class="block">Returns the region on image where Machine Readable Zone (MRZ) is expected or
  null if default region is used.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#isShowingFullDocument()">isShowingFullDocument</a></strong>()</code>
+<div class="block">Returns true if image of full document containing MRZ will be given to ImageListener.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#isShowingMRZ()">isShowingMRZ</a></strong>()</code>
+<div class="block">Returns true if image of Machine Readable Zone will be given to ImageListener.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setAllowUnparsedResults(boolean)">setAllowUnparsedResults</a></strong>(boolean&nbsp;allowUnparsed)</code>
+<div class="block">Set this to true to allow obtaining results that have not been parsed by SDK.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -209,6 +233,20 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setMRZRegion(com.microblink.geometry.Rectangle)">setMRZRegion</a></strong>(<a href="../../../../../com/microblink/geometry/Rectangle.html" title="class in com.microblink.geometry">Rectangle</a>&nbsp;region)</code>
 <div class="block">Defines the region on image where Machine Readable Zone (MRZ) is expected.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setShowFullDocument(boolean)">setShowFullDocument</a></strong>(boolean&nbsp;showFullDocument)</code>
+<div class="block">Set this to true if you use ImageListener and you want to obtain image containing
+ full document containing Machine Readable Zone.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setShowMRZ(boolean)">setShowMRZ</a></strong>(boolean&nbsp;showMRZ)</code>
+<div class="block">Set this to true if you use ImageListener and you want to obtain image containing
+ only Machine Readable Zone.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -336,6 +374,83 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <pre>public&nbsp;boolean&nbsp;shouldDetectMRZ()</pre>
 <div class="block">Returns true if Machine Readable Zone location detection is used.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if Machine Readable Zone location detection is used.</dd></dl>
+</li>
+</ul>
+<a name="setAllowUnparsedResults(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAllowUnparsedResults</h4>
+<pre>public&nbsp;void&nbsp;setAllowUnparsedResults(boolean&nbsp;allowUnparsed)</pre>
+<div class="block">Set this to true to allow obtaining results that have not been parsed by SDK.
+ By default this is off. The reason for this is that we want to ensure best possible
+ data quality when returning results. For that matter we internally parse the MRZ and
+ extract all data, taking all possible OCR mistakes into account. However, if you happen
+ to have a document with MRZ that has format our internal parser still does not support,
+ you need to allow returning of unparsed results. Unparsed results will not contain parsed
+ data, but will contain OCR result received from OCR engine, so you can parse data yourself.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>allowUnparsed</code> - allow returning of unparsed OCR data</dd></dl>
+</li>
+</ul>
+<a name="areUnparsedResultsAllowed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>areUnparsedResultsAllowed</h4>
+<pre>public&nbsp;boolean&nbsp;areUnparsedResultsAllowed()</pre>
+<div class="block">Returns true if returning of results that have failed to parse data is allowed.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if returning of results that have failed to parse data is allowed.</dd></dl>
+</li>
+</ul>
+<a name="setShowMRZ(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setShowMRZ</h4>
+<pre>public&nbsp;void&nbsp;setShowMRZ(boolean&nbsp;showMRZ)</pre>
+<div class="block">Set this to true if you use ImageListener and you want to obtain image containing
+ only Machine Readable Zone. The reported ImageType will be DEWARPED and image name will
+ be "MRZ". By default, this is turned off.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>showMRZ</code> - true to obtain image containing only machine readable zone</dd></dl>
+</li>
+</ul>
+<a name="isShowingMRZ()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isShowingMRZ</h4>
+<pre>public&nbsp;boolean&nbsp;isShowingMRZ()</pre>
+<div class="block">Returns true if image of Machine Readable Zone will be given to ImageListener.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if image of Machine Readable Zone will be given to ImageListener.</dd></dl>
+</li>
+</ul>
+<a name="setShowFullDocument(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setShowFullDocument</h4>
+<pre>public&nbsp;void&nbsp;setShowFullDocument(boolean&nbsp;showFullDocument)</pre>
+<div class="block">Set this to true if you use ImageListener and you want to obtain image containing
+ full document containing Machine Readable Zone. The document image's orientation will be
+ corrected. The reported ImageType will be DEWARPED and image name will
+ be "MRTD". By default, this is turned off.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>showFullDocument</code> - true to obtain image containing full document containing MRZ</dd></dl>
+</li>
+</ul>
+<a name="isShowingFullDocument()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isShowingFullDocument</h4>
+<pre>public&nbsp;boolean&nbsp;isShowingFullDocument()</pre>
+<div class="block">Returns true if image of full document containing MRZ will be given to ImageListener.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if image of full document containing MRZ will be given to ImageListener.</dd></dl>
 </li>
 </ul>
 <a name="describeContents()">
