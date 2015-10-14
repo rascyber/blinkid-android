@@ -198,11 +198,24 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/barcode/usdl/USDLRecognizerSettings.html#isScanning1DBarcodes()">isScanning1DBarcodes</a></strong>()</code>
+<div class="block">Returns true if scanning of 1D barcodes on some driver's licenses is enabled.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/barcode/usdl/USDLRecognizerSettings.html#isUncertainScanMode()">isUncertainScanMode</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/barcode/usdl/USDLRecognizerSettings.html#setNullQuietZoneAllowed(boolean)">setNullQuietZoneAllowed</a></strong>(boolean&nbsp;nullQuietZoneAllowed)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/barcode/usdl/USDLRecognizerSettings.html#setNullQuietZoneAllowed(boolean)">setNullQuietZoneAllowed</a></strong>(boolean&nbsp;nullQuietZoneAllowed)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/barcode/usdl/USDLRecognizerSettings.html#setScan1DBarcodes(boolean)">setScan1DBarcodes</a></strong>(boolean&nbsp;scan1DBarcodes)</code>
+<div class="block">Allow scanning of 1D Code39 and Code128 barcodes on driver's licenses that contain
+ those barcodes alongside PDF417 barcode.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -284,9 +297,9 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <h4>setUncertainScanning</h4>
 <pre>public&nbsp;void&nbsp;setUncertainScanning(boolean&nbsp;uncertainScanning)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>uncertainScanning</code> - Enable scanning of non-standard elements, but there is no
-            guarantee that all data will be read. For Pdf417 barcode to be
-            used when multiple rows are missing (e.g. not whole barcode is
-            printed)</dd></dl>
+                          guarantee that all data will be read. For Pdf417 barcode to be
+                          used when multiple rows are missing (e.g. not whole barcode is
+                          printed)</dd></dl>
 </li>
 </ul>
 <a name="isUncertainScanMode()">
@@ -307,8 +320,8 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <h4>setNullQuietZoneAllowed</h4>
 <pre>public&nbsp;void&nbsp;setNullQuietZoneAllowed(boolean&nbsp;nullQuietZoneAllowed)</pre>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>nullQuietZoneAllowed</code> - Allow scanning barcodes which don't have quiet zone
-            surrounding it (e.g. text concatenated with barcode). This
-            option can significantly increase recognition time.</dd></dl>
+                             surrounding it (e.g. text concatenated with barcode). This
+                             option can significantly increase recognition time.</dd></dl>
 </li>
 </ul>
 <a name="isNullQuietZoneAllowed()">
@@ -319,7 +332,31 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <h4>isNullQuietZoneAllowed</h4>
 <pre>public&nbsp;boolean&nbsp;isNullQuietZoneAllowed()</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true, if scanning barcodes which do not have quiet zone
-         surrounding it is allowed.</dd></dl>
+ surrounding it is allowed.</dd></dl>
+</li>
+</ul>
+<a name="setScan1DBarcodes(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setScan1DBarcodes</h4>
+<pre>public&nbsp;void&nbsp;setScan1DBarcodes(boolean&nbsp;scan1DBarcodes)</pre>
+<div class="block">Allow scanning of 1D Code39 and Code128 barcodes on driver's licenses that contain
+ those barcodes alongside PDF417 barcode. These barcodes usually contain redundant
+ information, but if not, you can enable scanning them if some data is missing.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>scan1DBarcodes</code> - Whether or not 1D barcodes on some licenses will be scanned.</dd></dl>
+</li>
+</ul>
+<a name="isScanning1DBarcodes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isScanning1DBarcodes</h4>
+<pre>public&nbsp;boolean&nbsp;isScanning1DBarcodes()</pre>
+<div class="block">Returns true if scanning of 1D barcodes on some driver's licenses is enabled.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if scanning of 1D barcodes on some driver's licenses is enabled.</dd></dl>
 </li>
 </ul>
 <a name="describeContents()">
