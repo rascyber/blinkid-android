@@ -189,21 +189,34 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/ukdl/UKDLRecognizerSettings.html#isShowingFullDocument()">isShowingFullDocument</a></strong>()</code>
+<div class="block">Returns true if image of scanned document will be given to MetadataListener.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/ukdl/UKDLRecognizerSettings.html#setExtractAddress(boolean)">setExtractAddress</a></strong>(boolean&nbsp;extractAddress)</code>
 <div class="block">Defines if address should be extracted from UK driver's license</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/ukdl/UKDLRecognizerSettings.html#setExtractExpiryDate(boolean)">setExtractExpiryDate</a></strong>(boolean&nbsp;extractExpiryDate)</code>
 <div class="block">Defines if expiry date should be extracted from UK driver's license</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/ukdl/UKDLRecognizerSettings.html#setExtractIssueDate(boolean)">setExtractIssueDate</a></strong>(boolean&nbsp;extractIssueDate)</code>
 <div class="block">Defines if issue date should be extracted from UK driver's license</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/ukdl/UKDLRecognizerSettings.html#setShowFullDocument(boolean)">setShowFullDocument</a></strong>(boolean&nbsp;showFullDocument)</code>
+<div class="block">Set this to true if you use MetadataListener and you want to obtain image containing
+ scanned document.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -356,6 +369,33 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <pre>public&nbsp;boolean&nbsp;shouldExtractAddress()</pre>
 <div class="block">Returns true is address is being extracted from UK driver's license</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>true if address is being extracted</dd></dl>
+</li>
+</ul>
+<a name="setShowFullDocument(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setShowFullDocument</h4>
+<pre>public&nbsp;void&nbsp;setShowFullDocument(boolean&nbsp;showFullDocument)</pre>
+<div class="block">Set this to true if you use MetadataListener and you want to obtain image containing
+ scanned document. The document image's orientation will be
+ corrected. The reported ImageType will be DEWARPED and image name will
+ be "UKDL". By default, this is turned off.
+ When enabling this, make sure you enabled receiving of dewarped image metadata in
+ <a href="../../../../../com/microblink/metadata/MetadataSettings.ImageMetadataSettings.html#setDewarpedImageEnabled(boolean)"><code>MetadataSettings.ImageMetadataSettings.setDewarpedImageEnabled(boolean)</code></a>.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>showFullDocument</code> - true to obtain image containing scanned document</dd></dl>
+</li>
+</ul>
+<a name="isShowingFullDocument()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isShowingFullDocument</h4>
+<pre>public&nbsp;boolean&nbsp;isShowingFullDocument()</pre>
+<div class="block">Returns true if image of scanned document will be given to MetadataListener.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if image of scanned document will be given to MetadataListener.</dd></dl>
 </li>
 </ul>
 <a name="writeToParcel(android.os.Parcel, int)">

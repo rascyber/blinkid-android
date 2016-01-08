@@ -116,29 +116,7 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/Image.html#Image(int, int, com.microblink.image.ImageType, com.microblink.image.ImageFormat, java.lang.String, com.microblink.image.ImagePlane[], android.graphics.Rect, com.microblink.hardware.orientation.Orientation)">Image</a></strong>(int&nbsp;width,
-     int&nbsp;height,
-     <a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a>&nbsp;imageType,
-     <a href="../../../com/microblink/image/ImageFormat.html" title="enum in com.microblink.image">ImageFormat</a>&nbsp;imageFormat,
-     java.lang.String&nbsp;imgName,
-     <a href="../../../com/microblink/image/ImagePlane.html" title="class in com.microblink.image">ImagePlane</a>[]&nbsp;imagePlanes,
-     android.graphics.Rect&nbsp;roi,
-     <a href="../../../com/microblink/hardware/orientation/Orientation.html" title="enum in com.microblink.hardware.orientation">Orientation</a>&nbsp;imageOrientation)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/Image.html#Image(int, int, int, int, java.lang.String, int, int, int, int, int, java.nio.ByteBuffer, int, int)">Image</a></strong>(int&nbsp;width,
-     int&nbsp;height,
-     int&nbsp;imageType,
-     int&nbsp;imageFormat,
-     java.lang.String&nbsp;imgName,
-     int&nbsp;rectLeft,
-     int&nbsp;rectTop,
-     int&nbsp;rectRight,
-     int&nbsp;rectBottom,
-     int&nbsp;orientation,
-     java.nio.ByteBuffer&nbsp;pixelBuffer,
-     int&nbsp;pixelStride,
-     int&nbsp;rowStride)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../../com/microblink/image/Image.html#Image(long)">Image</a></strong>(long&nbsp;nativeContext)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -169,7 +147,19 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#dispose()">dispose</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#dispose()">dispose</a></strong>()</code>
+<div class="block">Disposes native object containing image pixels.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#finalize()">finalize</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.nio.ByteBuffer</code></td>
+<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#getBuffer()">getBuffer</a></strong>()</code>
+<div class="block">Returns the native buffer that contains image pixels.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -196,15 +186,15 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../com/microblink/image/ImagePlane.html" title="class in com.microblink.image">ImagePlane</a>[]</code></td>
-<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#getImagePlanes()">getImagePlanes</a></strong>()</code>
-<div class="block">Returns the planes of the image.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code><a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a></code></td>
 <td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#getImageType()">getImageType</a></strong>()</code>
 <div class="block">Returns the type of the image.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#getPixelStride()">getPixelStride</a></strong>()</code>
+<div class="block">Returns the pixel stride for image buffer.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -215,23 +205,29 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#getRowStride()">getRowStride</a></strong>()</code>
+<div class="block">Returns the row stride for image buffer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#getWidth()">getWidth</a></strong>()</code>
 <div class="block">Returns the width of the image.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#isDisposed()">isDisposed</a></strong>()</code>
 <div class="block">Returns true if image's internal buffers are disposed and cannot be used anymore.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#setImageOrientation(com.microblink.hardware.orientation.Orientation)">setImageOrientation</a></strong>(<a href="../../../com/microblink/hardware/orientation/Orientation.html" title="enum in com.microblink.hardware.orientation">Orientation</a>&nbsp;orientation)</code>
 <div class="block">Use this method to change Image's orientation.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../com/microblink/image/Image.html#setROI(android.graphics.Rect)">setROI</a></strong>(android.graphics.Rect&nbsp;roi)</code>
 <div class="block">Sets the region of interest in image.</div>
@@ -243,7 +239,7 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>equals, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -259,41 +255,13 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Image(int, int, com.microblink.image.ImageType, com.microblink.image.ImageFormat, java.lang.String, com.microblink.image.ImagePlane[], android.graphics.Rect, com.microblink.hardware.orientation.Orientation)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>Image</h4>
-<pre>public&nbsp;Image(int&nbsp;width,
-     int&nbsp;height,
-     <a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a>&nbsp;imageType,
-     <a href="../../../com/microblink/image/ImageFormat.html" title="enum in com.microblink.image">ImageFormat</a>&nbsp;imageFormat,
-     java.lang.String&nbsp;imgName,
-     <a href="../../../com/microblink/image/ImagePlane.html" title="class in com.microblink.image">ImagePlane</a>[]&nbsp;imagePlanes,
-     android.graphics.Rect&nbsp;roi,
-     <a href="../../../com/microblink/hardware/orientation/Orientation.html" title="enum in com.microblink.hardware.orientation">Orientation</a>&nbsp;imageOrientation)</pre>
-</li>
-</ul>
-<a name="Image(int, int, int, int, java.lang.String, int, int, int, int, int, java.nio.ByteBuffer, int, int)">
+<a name="Image(long)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Image</h4>
-<pre>public&nbsp;Image(int&nbsp;width,
-     int&nbsp;height,
-     int&nbsp;imageType,
-     int&nbsp;imageFormat,
-     java.lang.String&nbsp;imgName,
-     int&nbsp;rectLeft,
-     int&nbsp;rectTop,
-     int&nbsp;rectRight,
-     int&nbsp;rectBottom,
-     int&nbsp;orientation,
-     java.nio.ByteBuffer&nbsp;pixelBuffer,
-     int&nbsp;pixelStride,
-     int&nbsp;rowStride)</pre>
+<pre>public&nbsp;Image(long&nbsp;nativeContext)</pre>
 </li>
 </ul>
 </li>
@@ -311,6 +279,23 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>dispose</h4>
 <pre>public&nbsp;void&nbsp;dispose()</pre>
+<div class="block">Disposes native object containing image pixels.
+ After this method is called, Image object cannot be used anymore.</div>
+</li>
+</ul>
+<a name="finalize()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>finalize</h4>
+<pre>protected&nbsp;void&nbsp;finalize()
+                 throws java.lang.Throwable</pre>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code>finalize</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code>java.lang.Throwable</code></dd></dl>
 </li>
 </ul>
 <a name="clone()">
@@ -383,15 +368,39 @@ extends java.lang.Object</pre>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the name of the image.</dd></dl>
 </li>
 </ul>
-<a name="getImagePlanes()">
+<a name="getBuffer()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getImagePlanes</h4>
-<pre>public&nbsp;<a href="../../../com/microblink/image/ImagePlane.html" title="class in com.microblink.image">ImagePlane</a>[]&nbsp;getImagePlanes()</pre>
-<div class="block">Returns the planes of the image.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the planes of the image.</dd></dl>
+<h4>getBuffer</h4>
+<pre>public&nbsp;java.nio.ByteBuffer&nbsp;getBuffer()</pre>
+<div class="block">Returns the native buffer that contains image pixels.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the native buffer that contains image pixels.</dd></dl>
+</li>
+</ul>
+<a name="getPixelStride()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPixelStride</h4>
+<pre>public&nbsp;int&nbsp;getPixelStride()</pre>
+<div class="block">Returns the pixel stride for image buffer. Pixel stride is byte difference between two
+ consecutive pixels image row. It is guaranteed that pixel stride is at least 1.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the pixel stride for image buffer.</dd></dl>
+</li>
+</ul>
+<a name="getRowStride()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRowStride</h4>
+<pre>public&nbsp;int&nbsp;getRowStride()</pre>
+<div class="block">Returns the row stride for image buffer. Row stride is byte difference between two
+ consecutive rows in image.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the row stride for image plane</dd></dl>
 </li>
 </ul>
 <a name="getROI()">
@@ -471,8 +480,8 @@ extends java.lang.Object</pre>
 <div class="block">Converts this image into Android Bitmap. This is a very slow process that involves
  copying and converting a lot of data.
  Returned bitmap has its own pixel buffer, so it may remain valid even after this
- image's buffers become invalid (usually after ImageListener's onImageAvailable method ends).</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>Image converted to Android Bitmap.</dd></dl>
+ image's buffers become invalid (i.e. after image gets disposed).</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Image converted to Android Bitmap or null if conversion failed.</dd></dl>
 </li>
 </ul>
 </li>

@@ -33,7 +33,7 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../com/microblink/image/ImagePlane.html" title="class in com.microblink.image"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><span class="strong">Prev Class</span></a></li>
 <li>Next Class</li>
 </ul>
 <ul class="navList">
@@ -126,36 +126,25 @@ extends java.lang.Enum&lt;<a href="../../../com/microblink/image/ImageType.html"
 <th class="colOne" scope="col">Enum Constant and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#BEST_QUALITY">BEST_QUALITY</a></strong></code>
-<div class="block">This is the original image that arrived from camera that was selected as best possible
- from local set of camera frames.</div>
+<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#DEBUG_DETECTION">DEBUG_DETECTION</a></strong></code>
+<div class="block">This is the image that was used as scratch surface to display document detection process (if any).</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#COLOR_DROP">COLOR_DROP</a></strong></code>
-<div class="block">This is the grayscale version of the image that will be processed, where converting
- color image to gray levels was performed using color drop mechanism.</div>
+<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#DEBUG_DEWARPED">DEBUG_DEWARPED</a></strong></code>
+<div class="block">This is the dewarped image that is obtained after performing perspecitve correction
+ of each element that needs to be scanned.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#DETECTION">DETECTION</a></strong></code>
-<div class="block">This is the image that was used as scratch surface to display document detection process (if any).</div>
+<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#DEBUG_OCR_INPUT">DEBUG_OCR_INPUT</a></strong></code>
+<div class="block">This is grayscale image preprocessed with OCR engine.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#DEWARPED">DEWARPED</a></strong></code>
 <div class="block">This is the dewarped image that is obtained after performing perspective correction
- of the item that will be scanned.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#GRAYSCALE">GRAYSCALE</a></strong></code>
-<div class="block">This is the grayscale version of the image that will be processed.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../com/microblink/image/ImageType.html#OCR_PREPROCESSED">OCR_PREPROCESSED</a></strong></code>
-<div class="block">This is grayscale image preprocessed with OCR engine.</div>
+ of the detected item.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -238,44 +227,6 @@ the order they are declared.</div>
  are in YUV_NV21 format.</div>
 </li>
 </ul>
-<a name="DEWARPED">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DEWARPED</h4>
-<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEWARPED</pre>
-<div class="block">This is the dewarped image that is obtained after performing perspective correction
- of the item that will be scanned. This image is usually in format ALPHA_8, but might
- also be in BGRA_8888. This image is not always available - this depends on build settings
- and enabled recognizers.</div>
-</li>
-</ul>
-<a name="GRAYSCALE">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>GRAYSCALE</h4>
-<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> GRAYSCALE</pre>
-<div class="block">This is the grayscale version of the image that will be processed. Image will be in
- format ALPHA_8. This image is not always available - this depends on build settings
- and enabled recognizers.</div>
-</li>
-</ul>
-<a name="COLOR_DROP">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>COLOR_DROP</h4>
-<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> COLOR_DROP</pre>
-<div class="block">This is the grayscale version of the image that will be processed, where converting
- color image to gray levels was performed using color drop mechanism. Image will be in
- format ALPHA_8. This image is not always available - this depends on build settings
- and enabled recognizers.</div>
-</li>
-</ul>
 <a name="SUCCESSFUL_SCAN">
 <!--   -->
 </a>
@@ -288,38 +239,52 @@ the order they are declared.</div>
  because usually original images are in YUV_NV21 format.</div>
 </li>
 </ul>
-<a name="OCR_PREPROCESSED">
+<a name="DEWARPED">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>OCR_PREPROCESSED</h4>
-<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> OCR_PREPROCESSED</pre>
+<h4>DEWARPED</h4>
+<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEWARPED</pre>
+<div class="block">This is the dewarped image that is obtained after performing perspective correction
+ of the detected item. This image is usually in format BGRA_888, but might
+ also be in ALPHA_8. This image is not always available - this depends on enabled recognizers
+ and their settings.</div>
+</li>
+</ul>
+<a name="DEBUG_DETECTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEBUG_DETECTION</h4>
+<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEBUG_DETECTION</pre>
+<div class="block">This is the image that was used as scratch surface to display document detection process (if any).
+ It is generally used for debugging detection process.</div>
+</li>
+</ul>
+<a name="DEBUG_OCR_INPUT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEBUG_OCR_INPUT</h4>
+<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEBUG_OCR_INPUT</pre>
 <div class="block">This is grayscale image preprocessed with OCR engine.
- This is the image that will be used for segmentation and classification of characters.</div>
+ This is the image that will be used for segmentation and classification of characters.
+ It is generally used for debugging OCR process.</div>
 </li>
 </ul>
-<a name="BEST_QUALITY">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>BEST_QUALITY</h4>
-<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> BEST_QUALITY</pre>
-<div class="block">This is the original image that arrived from camera that was selected as best possible
- from local set of camera frames. Usually this is the image that you will want to process.
- This image is not always available - this depends on build settings and enabled recognizers.
- If image is available, it will usually be in YUV_NV21 format.</div>
-</li>
-</ul>
-<a name="DETECTION">
+<a name="DEBUG_DEWARPED">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>DETECTION</h4>
-<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DETECTION</pre>
-<div class="block">This is the image that was used as scratch surface to display document detection process (if any).</div>
+<h4>DEBUG_DEWARPED</h4>
+<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEBUG_DEWARPED</pre>
+<div class="block">This is the dewarped image that is obtained after performing perspecitve correction
+ of each element that needs to be scanned. This image is usually in format ALPHA_8, but
+ sometimes can also be in BGRA_8888.</div>
 </li>
 </ul>
 </li>
@@ -392,7 +357,7 @@ with the specified name</dd>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../com/microblink/image/ImagePlane.html" title="class in com.microblink.image"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><span class="strong">Prev Class</span></a></li>
 <li>Next Class</li>
 </ul>
 <ul class="navList">

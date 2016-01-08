@@ -64,6 +64,11 @@
 <span class="strong">Package Hierarchies:</span>
 <ul class="horizontal">
 <li><a href="com/microblink/activity/package-tree.html">com.microblink.activity</a>, </li>
+<li><a href="com/microblink/detectors/package-tree.html">com.microblink.detectors</a>, </li>
+<li><a href="com/microblink/detectors/document/package-tree.html">com.microblink.detectors.document</a>, </li>
+<li><a href="com/microblink/detectors/multi/package-tree.html">com.microblink.detectors.multi</a>, </li>
+<li><a href="com/microblink/detectors/quad/package-tree.html">com.microblink.detectors.quad</a>, </li>
+<li><a href="com/microblink/detectors/quad/mrtd/package-tree.html">com.microblink.detectors.quad.mrtd</a>, </li>
 <li><a href="com/microblink/directApi/package-tree.html">com.microblink.directApi</a>, </li>
 <li><a href="com/microblink/directApi/frame/package-tree.html">com.microblink.directApi.frame</a>, </li>
 <li><a href="com/microblink/geometry/package-tree.html">com.microblink.geometry</a>, </li>
@@ -72,7 +77,6 @@
 <li><a href="com/microblink/hardware/camera/package-tree.html">com.microblink.hardware.camera</a>, </li>
 <li><a href="com/microblink/hardware/orientation/package-tree.html">com.microblink.hardware.orientation</a>, </li>
 <li><a href="com/microblink/image/package-tree.html">com.microblink.image</a>, </li>
-<li><a href="com/microblink/image/frame/package-tree.html">com.microblink.image.frame</a>, </li>
 <li><a href="com/microblink/locale/package-tree.html">com.microblink.locale</a>, </li>
 <li><a href="com/microblink/metadata/package-tree.html">com.microblink.metadata</a>, </li>
 <li><a href="com/microblink/metadata/detection/package-tree.html">com.microblink.metadata.detection</a>, </li>
@@ -91,6 +95,7 @@
 <li><a href="com/microblink/recognizers/blinkocr/engine/package-tree.html">com.microblink.recognizers.blinkocr.engine</a>, </li>
 <li><a href="com/microblink/recognizers/blinkocr/parser/package-tree.html">com.microblink.recognizers.blinkocr.parser</a>, </li>
 <li><a href="com/microblink/recognizers/blinkocr/parser/generic/package-tree.html">com.microblink.recognizers.blinkocr.parser.generic</a>, </li>
+<li><a href="com/microblink/recognizers/detector/package-tree.html">com.microblink.recognizers.detector</a>, </li>
 <li><a href="com/microblink/recognizers/settings/package-tree.html">com.microblink.recognizers.settings</a>, </li>
 <li><a href="com/microblink/results/barcode/package-tree.html">com.microblink.results.barcode</a>, </li>
 <li><a href="com/microblink/results/ocr/package-tree.html">com.microblink.results.ocr</a>, </li>
@@ -113,6 +118,7 @@
 <ul>
 <li type="circle">com.microblink.recognizers.blinkbarcode.bardecoder.<a href="com/microblink/recognizers/blinkbarcode/bardecoder/BarDecoderScanResult.html" title="class in com.microblink.recognizers.blinkbarcode.bardecoder"><span class="strong">BarDecoderScanResult</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkocr.<a href="com/microblink/recognizers/blinkocr/BlinkOCRRecognitionResult.html" title="class in com.microblink.recognizers.blinkocr"><span class="strong">BlinkOCRRecognitionResult</span></a> (implements android.os.Parcelable)</li>
+<li type="circle">com.microblink.recognizers.detector.<a href="com/microblink/recognizers/detector/DetectorRecognitionResult.html" title="class in com.microblink.recognizers.detector"><span class="strong">DetectorRecognitionResult</span></a></li>
 <li type="circle">com.microblink.recognizers.<a href="com/microblink/recognizers/LibraryInfoResult.html" title="class in com.microblink.recognizers"><span class="strong">LibraryInfoResult</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkid.mrtd.<a href="com/microblink/recognizers/blinkid/mrtd/MRTDRecognitionResult.html" title="class in com.microblink.recognizers.blinkid.mrtd"><span class="strong">MRTDRecognitionResult</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkid.malaysia.<a href="com/microblink/recognizers/blinkid/malaysia/MyKadRecognitionResult.html" title="class in com.microblink.recognizers.blinkid.malaysia"><span class="strong">MyKadRecognitionResult</span></a></li>
@@ -153,15 +159,32 @@
 </li>
 </ul>
 </li>
-<li type="circle">com.microblink.image.<a href="com/microblink/image/Image.html" title="class in com.microblink.image"><span class="strong">Image</span></a></li>
-<li type="circle">com.microblink.image.frame.<a href="com/microblink/image/frame/ImageFrame.html" title="class in com.microblink.image.frame"><span class="strong">ImageFrame</span></a>
+<li type="circle">com.microblink.detectors.<a href="com/microblink/detectors/DecodingInfo.html" title="class in com.microblink.detectors"><span class="strong">DecodingInfo</span></a> (implements android.os.Parcelable)</li>
+<li type="circle">com.microblink.detectors.<a href="com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors"><span class="strong">DetectorResult</span></a> (implements android.os.Parcelable)
 <ul>
-<li type="circle">com.microblink.image.frame.<a href="com/microblink/image/frame/AlphaImageFrame.html" title="class in com.microblink.image.frame"><span class="strong">AlphaImageFrame</span></a></li>
-<li type="circle">com.microblink.image.frame.<a href="com/microblink/image/frame/BGRAImageFrame.html" title="class in com.microblink.image.frame"><span class="strong">BGRAImageFrame</span></a></li>
-<li type="circle">com.microblink.image.frame.<a href="com/microblink/image/frame/YUVImageFrame.html" title="class in com.microblink.image.frame"><span class="strong">YUVImageFrame</span></a></li>
+<li type="circle">com.microblink.detectors.multi.<a href="com/microblink/detectors/multi/MultiDetectorResult.html" title="class in com.microblink.detectors.multi"><span class="strong">MultiDetectorResult</span></a></li>
+<li type="circle">com.microblink.detectors.quad.<a href="com/microblink/detectors/quad/QuadDetectorResult.html" title="class in com.microblink.detectors.quad"><span class="strong">QuadDetectorResult</span></a>
+<ul>
+<li type="circle">com.microblink.detectors.document.<a href="com/microblink/detectors/document/DocumentDetectorResult.html" title="class in com.microblink.detectors.document"><span class="strong">DocumentDetectorResult</span></a></li>
+<li type="circle">com.microblink.detectors.quad.mrtd.<a href="com/microblink/detectors/quad/mrtd/MRTDDetectorResult.html" title="class in com.microblink.detectors.quad.mrtd"><span class="strong">MRTDDetectorResult</span></a></li>
 </ul>
 </li>
-<li type="circle">com.microblink.image.<a href="com/microblink/image/ImagePlane.html" title="class in com.microblink.image"><span class="strong">ImagePlane</span></a></li>
+</ul>
+</li>
+<li type="circle">com.microblink.detectors.<a href="com/microblink/detectors/DetectorSettings.html" title="class in com.microblink.detectors"><span class="strong">DetectorSettings</span></a> (implements android.os.Parcelable)
+<ul>
+<li type="circle">com.microblink.detectors.document.<a href="com/microblink/detectors/document/DocumentDetectorSettings.html" title="class in com.microblink.detectors.document"><span class="strong">DocumentDetectorSettings</span></a></li>
+<li type="circle">com.microblink.detectors.multi.<a href="com/microblink/detectors/multi/MultiDetectorSettings.html" title="class in com.microblink.detectors.multi"><span class="strong">MultiDetectorSettings</span></a></li>
+<li type="circle">com.microblink.detectors.quad.<a href="com/microblink/detectors/quad/QuadDetectorSettings.html" title="class in com.microblink.detectors.quad"><span class="strong">QuadDetectorSettings</span></a>
+<ul>
+<li type="circle">com.microblink.detectors.quad.mrtd.<a href="com/microblink/detectors/quad/mrtd/MRTDDetectorSettings.html" title="class in com.microblink.detectors.quad.mrtd"><span class="strong">MRTDDetectorSettings</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li type="circle">com.microblink.detectors.document.<a href="com/microblink/detectors/document/DocumentSpecification.html" title="class in com.microblink.detectors.document"><span class="strong">DocumentSpecification</span></a> (implements android.os.Parcelable)</li>
+<li type="circle">com.microblink.image.<a href="com/microblink/image/Image.html" title="class in com.microblink.image"><span class="strong">Image</span></a></li>
+<li type="circle">com.microblink.image.<a href="com/microblink/image/ImageFrame.html" title="class in com.microblink.image"><span class="strong">ImageFrame</span></a></li>
 <li type="circle">com.microblink.locale.<a href="com/microblink/locale/LanguageUtils.html" title="class in com.microblink.locale"><span class="strong">LanguageUtils</span></a></li>
 <li type="circle">com.microblink.metadata.<a href="com/microblink/metadata/Metadata.html" title="class in com.microblink.metadata"><span class="strong">Metadata</span></a>
 <ul>
@@ -179,6 +202,7 @@
 </li>
 <li type="circle">com.microblink.metadata.<a href="com/microblink/metadata/MetadataSettings.html" title="class in com.microblink.metadata"><span class="strong">MetadataSettings</span></a></li>
 <li type="circle">com.microblink.metadata.<a href="com/microblink/metadata/MetadataSettings.ImageMetadataSettings.html" title="class in com.microblink.metadata"><span class="strong">MetadataSettings.ImageMetadataSettings</span></a></li>
+<li type="circle">com.microblink.metadata.<a href="com/microblink/metadata/MetadataSettings.ImageMetadataSettings.DebugImageMetadataSettings.html" title="class in com.microblink.metadata"><span class="strong">MetadataSettings.ImageMetadataSettings.DebugImageMetadataSettings</span></a></li>
 <li type="circle">com.microblink.results.ocr.<a href="com/microblink/results/ocr/OcrBlock.html" title="class in com.microblink.results.ocr"><span class="strong">OcrBlock</span></a> (implements android.os.Parcelable)</li>
 <li type="circle">com.microblink.results.ocr.<a href="com/microblink/results/ocr/OcrChar.html" title="class in com.microblink.results.ocr"><span class="strong">OcrChar</span></a> (implements android.os.Parcelable)</li>
 <li type="circle">com.microblink.results.ocr.<a href="com/microblink/results/ocr/OcrLine.html" title="class in com.microblink.results.ocr"><span class="strong">OcrLine</span></a> (implements android.os.Parcelable)</li>
@@ -201,6 +225,7 @@
 <ul>
 <li type="circle">com.microblink.recognizers.blinkbarcode.bardecoder.<a href="com/microblink/recognizers/blinkbarcode/bardecoder/BarDecoderRecognizerSettings.html" title="class in com.microblink.recognizers.blinkbarcode.bardecoder"><span class="strong">BarDecoderRecognizerSettings</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkocr.<a href="com/microblink/recognizers/blinkocr/BlinkOCRRecognizerSettings.html" title="class in com.microblink.recognizers.blinkocr"><span class="strong">BlinkOCRRecognizerSettings</span></a></li>
+<li type="circle">com.microblink.recognizers.detector.<a href="com/microblink/recognizers/detector/DetectorRecognizerSettings.html" title="class in com.microblink.recognizers.detector"><span class="strong">DetectorRecognizerSettings</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkid.mrtd.<a href="com/microblink/recognizers/blinkid/mrtd/MRTDRecognizerSettings.html" title="class in com.microblink.recognizers.blinkid.mrtd"><span class="strong">MRTDRecognizerSettings</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkid.malaysia.<a href="com/microblink/recognizers/blinkid/malaysia/MyKadRecognizerSettings.html" title="class in com.microblink.recognizers.blinkid.malaysia"><span class="strong">MyKadRecognizerSettings</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkbarcode.pdf417.<a href="com/microblink/recognizers/blinkbarcode/pdf417/Pdf417RecognizerSettings.html" title="class in com.microblink.recognizers.blinkbarcode.pdf417"><span class="strong">Pdf417RecognizerSettings</span></a></li>
@@ -279,6 +304,11 @@
 <li type="circle">com.microblink.view.<a href="com/microblink/view/NotSupportedReason.html" title="enum in com.microblink.view"><span class="strong">NotSupportedReason</span></a></li>
 <li type="circle">com.microblink.view.recognition.<a href="com/microblink/view/recognition/DetectionStatus.html" title="enum in com.microblink.view.recognition"><span class="strong">DetectionStatus</span></a></li>
 <li type="circle">com.microblink.activity.<a href="com/microblink/activity/ShowOcrResultMode.html" title="enum in com.microblink.activity"><span class="strong">ShowOcrResultMode</span></a> (implements android.os.Parcelable)</li>
+<li type="circle">com.microblink.detectors.<a href="com/microblink/detectors/DetectorResult.DetectionCode.html" title="enum in com.microblink.detectors"><span class="strong">DetectorResult.DetectionCode</span></a></li>
+<li type="circle">com.microblink.detectors.document.<a href="com/microblink/detectors/document/DocumentDetectorResult.ScreenOrientation.html" title="enum in com.microblink.detectors.document"><span class="strong">DocumentDetectorResult.ScreenOrientation</span></a></li>
+<li type="circle">com.microblink.detectors.document.<a href="com/microblink/detectors/document/DocumentSpecificationPreset.html" title="enum in com.microblink.detectors.document"><span class="strong">DocumentSpecificationPreset</span></a></li>
+<li type="circle">com.microblink.detectors.document.<a href="com/microblink/detectors/document/ScanningMode.html" title="enum in com.microblink.detectors.document"><span class="strong">ScanningMode</span></a></li>
+<li type="circle">com.microblink.detectors.quad.mrtd.<a href="com/microblink/detectors/quad/mrtd/MRTDDetectorResult.MRTDDetectionCode.html" title="enum in com.microblink.detectors.quad.mrtd"><span class="strong">MRTDDetectorResult.MRTDDetectionCode</span></a></li>
 <li type="circle">com.microblink.recognizers.blinkbarcode.<a href="com/microblink/recognizers/blinkbarcode/BarcodeType.html" title="enum in com.microblink.recognizers.blinkbarcode"><span class="strong">BarcodeType</span></a></li>
 <li type="circle">com.microblink.results.barcode.<a href="com/microblink/results/barcode/ElementType.html" title="enum in com.microblink.results.barcode"><span class="strong">ElementType</span></a></li>
 <li type="circle">com.microblink.results.ocr.<a href="com/microblink/results/ocr/OcrFont.html" title="enum in com.microblink.results.ocr"><span class="strong">OcrFont</span></a></li>

@@ -580,7 +580,8 @@ extends android.view.ViewGroup</pre>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../com/microblink/view/BaseCameraView.html#setMeteringAreas(com.microblink.geometry.Rectangle[])">setMeteringAreas</a></strong>(<a href="../../../com/microblink/geometry/Rectangle.html" title="class in com.microblink.geometry">Rectangle</a>[]&nbsp;meteringAreas)</code>
+<td class="colLast"><code><strong><a href="../../../com/microblink/view/BaseCameraView.html#setMeteringAreas(com.microblink.geometry.Rectangle[], boolean)">setMeteringAreas</a></strong>(<a href="../../../com/microblink/geometry/Rectangle.html" title="class in com.microblink.geometry">Rectangle</a>[]&nbsp;meteringAreas,
+                boolean&nbsp;rotateAreasWithDevice)</code>
 <div class="block">Sets the areas where camera will perform focus, exposure and white balance meterings.</div>
 </td>
 </tr>
@@ -1366,15 +1367,16 @@ extends android.view.ViewGroup</pre>
 <pre>protected final&nbsp;boolean&nbsp;isOrientationAllowed(<a href="../../../com/microblink/hardware/orientation/Orientation.html" title="enum in com.microblink.hardware.orientation">Orientation</a>&nbsp;orientation)</pre>
 </li>
 </ul>
-<a name="setMeteringAreas(com.microblink.geometry.Rectangle[])">
+<a name="setMeteringAreas(com.microblink.geometry.Rectangle[], boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setMeteringAreas</h4>
-<pre>public final&nbsp;void&nbsp;setMeteringAreas(<a href="../../../com/microblink/geometry/Rectangle.html" title="class in com.microblink.geometry">Rectangle</a>[]&nbsp;meteringAreas)</pre>
+<pre>public final&nbsp;void&nbsp;setMeteringAreas(<a href="../../../com/microblink/geometry/Rectangle.html" title="class in com.microblink.geometry">Rectangle</a>[]&nbsp;meteringAreas,
+                    boolean&nbsp;rotateAreasWithDevice)</pre>
 <div class="block">Sets the areas where camera will perform focus, exposure and white balance meterings.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>meteringAreas</code> - array of rectangles that define areas where camera will perform focus, exposure and white balance meterings.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>meteringAreas</code> - array of rectangles that define areas where camera will perform focus, exposure and white balance meterings.</dd><dd><code>rotateAreasWithDevice</code> - if set to true, metering areas will be readjusted each time device orientation changes</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code>java.lang.NullPointerException</code> - if at least one element of meteringAreas is null</dd>
 <dd><code>java.lang.IllegalArgumentException</code> - if at least on element of meteringAreas has either zero surface or is not inside view</dd>

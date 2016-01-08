@@ -197,7 +197,7 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/mrtd/MRTDRecognizerSettings.html#isShowingFullDocument()">isShowingFullDocument</a></strong>()</code>
-<div class="block">Returns true if image of full document containing MRZ will be given to ImageListener.</div>
+<div class="block">Returns true if image of full document containing MRZ will be given to MetadataListener.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -215,7 +215,7 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/microblink/recognizers/blinkid/mrtd/MRTDRecognizerSettings.html#setShowFullDocument(boolean)">setShowFullDocument</a></strong>(boolean&nbsp;showFullDocument)</code>
-<div class="block">Set this to true if you use ImageListener and you want to obtain image containing
+<div class="block">Set this to true if you use MetadataListener and you want to obtain image containing
  full document containing Machine Readable Zone.</div>
 </td>
 </tr>
@@ -353,10 +353,12 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <li class="blockList">
 <h4>setShowFullDocument</h4>
 <pre>public&nbsp;void&nbsp;setShowFullDocument(boolean&nbsp;showFullDocument)</pre>
-<div class="block">Set this to true if you use ImageListener and you want to obtain image containing
+<div class="block">Set this to true if you use MetadataListener and you want to obtain image containing
  full document containing Machine Readable Zone. The document image's orientation will be
  corrected. The reported ImageType will be DEWARPED and image name will
- be "MRTD". By default, this is turned off.</div>
+ be "MRTD". By default, this is turned off.
+ When enabling this, make sure you enabled receiving of dewarped image metadata in
+ <a href="../../../../../com/microblink/metadata/MetadataSettings.ImageMetadataSettings.html#setDewarpedImageEnabled(boolean)"><code>MetadataSettings.ImageMetadataSettings.setDewarpedImageEnabled(boolean)</code></a>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>showFullDocument</code> - true to obtain image containing full document containing MRZ</dd></dl>
 </li>
 </ul>
@@ -367,8 +369,8 @@ extends <a href="../../../../../com/microblink/recognizers/settings/RecognizerSe
 <li class="blockList">
 <h4>isShowingFullDocument</h4>
 <pre>public&nbsp;boolean&nbsp;isShowingFullDocument()</pre>
-<div class="block">Returns true if image of full document containing MRZ will be given to ImageListener.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>true if image of full document containing MRZ will be given to ImageListener.</dd></dl>
+<div class="block">Returns true if image of full document containing MRZ will be given to MetadataListener.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>true if image of full document containing MRZ will be given to MetadataListener.</dd></dl>
 </li>
 </ul>
 <a name="writeToParcel(android.os.Parcel, int)">
