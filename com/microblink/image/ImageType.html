@@ -151,22 +151,28 @@ extends java.lang.Enum&lt;<a href="../../../com/microblink/image/ImageType.html"
 </td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../com/microblink/image/ImageType.html#DEBUG_MARKED_DEWARPED">DEBUG_MARKED_DEWARPED</a></span></code>
+<div class="block">This is same as DEBUG_DEWARPED, except it also contains visualisation of OCR result layered
+ onto image.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../com/microblink/image/ImageType.html#DEBUG_OCR_INPUT">DEBUG_OCR_INPUT</a></span></code>
 <div class="block">This is grayscale image preprocessed with OCR engine.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../com/microblink/image/ImageType.html#DEWARPED">DEWARPED</a></span></code>
 <div class="block">This is the dewarped image that is obtained after performing perspective correction
  of the detected item.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../com/microblink/image/ImageType.html#ORIGINAL">ORIGINAL</a></span></code>
 <div class="block">This is the original image that arrived from camera.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../com/microblink/image/ImageType.html#SUCCESSFUL_SCAN">SUCCESSFUL_SCAN</a></span></code>
 <div class="block">This is the original image that arrived from camera that was used to recognize
  item.</div>
@@ -292,13 +298,24 @@ the order they are declared.</div>
 <a name="DEBUG_DEWARPED">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>DEBUG_DEWARPED</h4>
 <pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEBUG_DEWARPED</pre>
 <div class="block">This is the dewarped image that is obtained after performing perspecitve correction
  of each element that needs to be scanned. This image is usually in format ALPHA_8, but
  sometimes can also be in BGRA_8888.</div>
+</li>
+</ul>
+<a name="DEBUG_MARKED_DEWARPED">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DEBUG_MARKED_DEWARPED</h4>
+<pre>public static final&nbsp;<a href="../../../com/microblink/image/ImageType.html" title="enum in com.microblink.image">ImageType</a> DEBUG_MARKED_DEWARPED</pre>
+<div class="block">This is same as DEBUG_DEWARPED, except it also contains visualisation of OCR result layered
+ onto image. This image is always in BGRA_8888 format.</div>
 </li>
 </ul>
 </li>

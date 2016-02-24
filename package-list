@@ -23,9 +23,9 @@ com.microblink.recognizers.blinkbarcode.bardecoder
 com.microblink.recognizers.blinkbarcode.pdf417
 com.microblink.recognizers.blinkbarcode.usdl
 com.microblink.recognizers.blinkbarcode.zxing
+com.microblink.recognizers.blinkid.eudl
 com.microblink.recognizers.blinkid.malaysia
 com.microblink.recognizers.blinkid.mrtd
-com.microblink.recognizers.blinkid.ukdl
 com.microblink.recognizers.blinkocr
 com.microblink.recognizers.blinkocr.engine
 com.microblink.recognizers.blinkocr.parser

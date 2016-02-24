@@ -168,68 +168,75 @@ implements <a href="../../../com/microblink/view/CameraEventsListener.html" titl
 <tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_IMAGE_LISTENER">EXTRAS_IMAGE_LISTENER</a></span></code>
-<div class="block">Define an ImageListener that will obtain images that are being processed.</div>
+<div class="block">Define an <a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><code>ImageListener</code></a> that will obtain images that are being processed.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_IMAGE_METADATA_SETTINGS">EXTRAS_IMAGE_METADATA_SETTINGS</a></span></code>
+<div class="block">Define a <a href="../../../com/microblink/metadata/MetadataSettings.ImageMetadataSettings.html" title="class in com.microblink.metadata"><code>MetadataSettings.ImageMetadataSettings</code></a> that will define
+ which images will be sent to <a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><code>ImageListener</code></a> set via <a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_IMAGE_LISTENER"><code>EXTRAS_IMAGE_LISTENER</code></a> extra.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_INFINITE_LOOP_SCAN">EXTRAS_INFINITE_LOOP_SCAN</a></span></code>
 <div class="block">If set to true, scan activity will never return</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_LICENSE_KEY">EXTRAS_LICENSE_KEY</a></span></code>
 <div class="block">Key for setting the license key</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_LICENSEE">EXTRAS_LICENSEE</a></span></code>
 <div class="block">Key for setting the license owner</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_RECOGNITION_RESULTS">EXTRAS_RECOGNITION_RESULTS</a></span></code>
 <div class="block">Recognition results after recognition</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_SCAN_CONFIGURATION">EXTRAS_SCAN_CONFIGURATION</a></span></code>
 <div class="block">Key for setting scan configuration</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_SCAN_RESULTS">EXTRAS_SCAN_RESULTS</a></span></code>
 <div class="block">Key for obtaining scan results (if not scanning in infinite loop)</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_SHOW_OCR_RESULT">EXTRAS_SHOW_OCR_RESULT</a></span></code>
 <div class="block">Defines whether OCR results will be displayed in UI</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_SHOW_OCR_RESULT_MODE">EXTRAS_SHOW_OCR_RESULT_MODE</a></span></code>
 <div class="block">Defines how OCR results will be displayed in UI</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_USE_LEGACY_CAMERA_API">EXTRAS_USE_LEGACY_CAMERA_API</a></span></code>
 <div class="block">Force using legacy Camera API even on Lollipop devices that support new Camera2 API.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#mShowOcrResult">mShowOcrResult</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../com/microblink/activity/ShowOcrResultMode.html" title="enum in com.microblink.activity">ShowOcrResultMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/activity/BlinkOCRActivity.html#mShowOcrResultMode">mShowOcrResultMode</a></span></code>&nbsp;</td>
 </tr>
@@ -572,13 +579,29 @@ implements <a href="../../../com/microblink/view/CameraEventsListener.html" titl
 <li class="blockList">
 <h4>EXTRAS_IMAGE_LISTENER</h4>
 <pre>public static final&nbsp;java.lang.String EXTRAS_IMAGE_LISTENER</pre>
-<div class="block">Define an ImageListener that will obtain images that are being processed.
+<div class="block">Define an <a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><code>ImageListener</code></a> that will obtain images that are being processed.
  Make sure that your ImageListener implementation correctly implements Parcelable
- interface with static CREATOR field. Without this, you might encounter a runtime error.
- ImageListener interface is located in com.microblink.image package.</div>
+ interface with static CREATOR field. Without this, you might encounter a runtime error.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#com.microblink.activity.BlinkOCRActivity.EXTRAS_IMAGE_LISTENER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="EXTRAS_IMAGE_METADATA_SETTINGS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EXTRAS_IMAGE_METADATA_SETTINGS</h4>
+<pre>public static final&nbsp;java.lang.String EXTRAS_IMAGE_METADATA_SETTINGS</pre>
+<div class="block">Define a <a href="../../../com/microblink/metadata/MetadataSettings.ImageMetadataSettings.html" title="class in com.microblink.metadata"><code>MetadataSettings.ImageMetadataSettings</code></a> that will define
+ which images will be sent to <a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><code>ImageListener</code></a> set via <a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_IMAGE_LISTENER"><code>EXTRAS_IMAGE_LISTENER</code></a> extra.
+ If not set, <a href="../../../com/microblink/image/ImageListener.html" title="interface in com.microblink.image"><code>ImageListener</code></a> set via <a href="../../../com/microblink/activity/BlinkOCRActivity.html#EXTRAS_IMAGE_LISTENER"><code>EXTRAS_IMAGE_LISTENER</code></a> will receive all possible
+ images.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#com.microblink.activity.BlinkOCRActivity.EXTRAS_IMAGE_METADATA_SETTINGS">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
