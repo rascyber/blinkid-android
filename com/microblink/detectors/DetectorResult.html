@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -111,14 +111,14 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../com/microblink/detectors/multi/MultiDetectorResult.html" title="class in com.microblink.detectors.multi">MultiDetectorResult</a>, <a href="../../../com/microblink/detectors/quad/QuadDetectorResult.html" title="class in com.microblink.detectors.quad">QuadDetectorResult</a></dd>
+<dd><a href="../../../com/microblink/detectors/face/FaceDetectorResult.html" title="class in com.microblink.detectors.face">FaceDetectorResult</a>, <a href="../../../com/microblink/detectors/multi/MultiDetectorResult.html" title="class in com.microblink.detectors.multi">MultiDetectorResult</a>, <a href="../../../com/microblink/detectors/points/PointsDetectorResult.html" title="class in com.microblink.detectors.points">PointsDetectorResult</a>, <a href="../../../com/microblink/detectors/quad/QuadDetectorResult.html" title="class in com.microblink.detectors.quad">QuadDetectorResult</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">DetectorResult</span>
 extends java.lang.Object
 implements android.os.Parcelable</pre>
-<div class="block">Created by ivan on 12/9/15.</div>
+<div class="block">Abstract detector result.</div>
 </li>
 </ul>
 </div>
@@ -166,8 +166,18 @@ implements android.os.Parcelable</pre>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../com/microblink/detectors/DetectorResult.DetectionCode.html" title="enum in com.microblink.detectors">DetectorResult.DetectionCode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#mDetectionCode">mDetectionCode</a></span></code>
-<div class="block">Detection code which describes the detection status</div>
+<div class="block">Detection code which indicates the type of detection</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../com/microblink/view/recognition/DetectionStatus.html" title="enum in com.microblink.view.recognition">DetectionStatus</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#mDetectionStatus">mDetectionStatus</a></span></code>
+<div class="block">Detection status which indicates the status of the detection</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected android.graphics.Matrix</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#mTransformMatrix">mTransformMatrix</a></span></code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -193,9 +203,10 @@ implements android.os.Parcelable</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#DetectorResult-int-">DetectorResult</a></span>(int&nbsp;detectionCode)</code>
-<div class="block">Constructor of base <a href="../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors"><code>DetectorResult</code></a> class that only sets the detection code based
- on detection code from native library.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#DetectorResult-int-int-float:A-">DetectorResult</a></span>(int&nbsp;detectionCode,
+              int&nbsp;detectionStatus,
+              float[]&nbsp;transformMatrix)</code>
+<div class="block">Constructor of base <a href="../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors"><code>DetectorResult</code></a> class.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -226,7 +237,7 @@ implements android.os.Parcelable</pre>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../com/microblink/detectors/DetectorResult.DetectionCode.html" title="enum in com.microblink.detectors">DetectorResult.DetectionCode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#getDetectionCode--">getDetectionCode</a></span>()</code>
-<div class="block">Getter for detection code which describes the detection status.</div>
+<div class="block">Getter for detection code which indicates the type of detection.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -242,16 +253,22 @@ implements android.os.Parcelable</pre>
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../com/microblink/view/recognition/DetectionStatus.html" title="enum in com.microblink.view.recognition">DetectionStatus</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#getDetectionStatus--">getDetectionStatus</a></span>()</code>
+<div class="block">Returns the detection status of the detector result.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#setDetectionCode-int-">setDetectionCode</a></span>(int&nbsp;detectionCode)</code>
 <div class="block">Sets the detection code member variable(s) based on detection code from native library.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../com/microblink/detectors/DetectorResult.html#writeToParcel-android.os.Parcel-int-">writeToParcel</a></span>(android.os.Parcel&nbsp;dest,
              int&nbsp;flags)</code>&nbsp;</td>
@@ -281,11 +298,30 @@ implements android.os.Parcelable</pre>
 <a name="mDetectionCode">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>mDetectionCode</h4>
 <pre>protected&nbsp;<a href="../../../com/microblink/detectors/DetectorResult.DetectionCode.html" title="enum in com.microblink.detectors">DetectorResult.DetectionCode</a> mDetectionCode</pre>
-<div class="block">Detection code which describes the detection status</div>
+<div class="block">Detection code which indicates the type of detection</div>
+</li>
+</ul>
+<a name="mDetectionStatus">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mDetectionStatus</h4>
+<pre>protected&nbsp;<a href="../../../com/microblink/view/recognition/DetectionStatus.html" title="enum in com.microblink.view.recognition">DetectionStatus</a> mDetectionStatus</pre>
+<div class="block">Detection status which indicates the status of the detection</div>
+</li>
+</ul>
+<a name="mTransformMatrix">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>mTransformMatrix</h4>
+<pre>protected&nbsp;android.graphics.Matrix mTransformMatrix</pre>
 </li>
 </ul>
 </li>
@@ -296,18 +332,22 @@ implements android.os.Parcelable</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="DetectorResult-int-">
+<a name="DetectorResult-int-int-float:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>DetectorResult</h4>
-<pre>protected&nbsp;DetectorResult(int&nbsp;detectionCode)</pre>
-<div class="block">Constructor of base <a href="../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors"><code>DetectorResult</code></a> class that only sets the detection code based
- on detection code from native library.</div>
+<pre>protected&nbsp;DetectorResult(int&nbsp;detectionCode,
+                         int&nbsp;detectionStatus,
+                         float[]&nbsp;transformMatrix)</pre>
+<div class="block">Constructor of base <a href="../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors"><code>DetectorResult</code></a> class.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>detectionCode</code> - Detection code from native library.</dd>
+<dd><code>detectionStatus</code> - Detection status from native library.</dd>
+<dd><code>transformMatrix</code> - Transformation matrix which can be used to transform this result's coordinate system into
+                        coordinate system of visible camera frame normalized to unit rectangle.</dd>
 </dl>
 </li>
 </ul>
@@ -340,7 +380,7 @@ implements android.os.Parcelable</pre>
 <li class="blockList">
 <h4>getDetectionCode</h4>
 <pre>public&nbsp;<a href="../../../com/microblink/detectors/DetectorResult.DetectionCode.html" title="enum in com.microblink.detectors">DetectorResult.DetectionCode</a>&nbsp;getDetectionCode()</pre>
-<div class="block">Getter for detection code which describes the detection status.</div>
+<div class="block">Getter for detection code which indicates the type of detection.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The detection code.</dd>
@@ -386,6 +426,20 @@ implements android.os.Parcelable</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The detection code name.</dd>
+</dl>
+</li>
+</ul>
+<a name="getDetectionStatus--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDetectionStatus</h4>
+<pre>public&nbsp;<a href="../../../com/microblink/view/recognition/DetectionStatus.html" title="enum in com.microblink.view.recognition">DetectionStatus</a>&nbsp;getDetectionStatus()</pre>
+<div class="block">Returns the detection status of the detector result.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the detection status of the detector result.</dd>
 </dl>
 </li>
 </ul>

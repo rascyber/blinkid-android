@@ -1,7 +1,9 @@
 com.microblink.activity
 com.microblink.detectors
 com.microblink.detectors.document
+com.microblink.detectors.face
 com.microblink.detectors.multi
+com.microblink.detectors.points
 com.microblink.detectors.quad
 com.microblink.detectors.quad.mrtd
 com.microblink.directApi
@@ -14,7 +16,6 @@ com.microblink.hardware.orientation
 com.microblink.image
 com.microblink.locale
 com.microblink.metadata
-com.microblink.metadata.detection
 com.microblink.ocr
 com.microblink.recognition
 com.microblink.recognizers
@@ -38,3 +39,4 @@ com.microblink.results.ocr
 com.microblink.util
 com.microblink.view
 com.microblink.view.recognition
+com.microblink.view.viewfinder.quadview

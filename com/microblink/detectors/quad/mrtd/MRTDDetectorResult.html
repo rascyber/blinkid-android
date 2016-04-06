@@ -123,7 +123,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">MRTDDetectorResult</span>
 extends <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html" title="class in com.microblink.detectors.quad">QuadDetectorResult</a></pre>
-<div class="block">Created by ivan on 12/9/15.</div>
+<div class="block">Represents a detector result created by MRTD detector initialised with <a href="../../../../../com/microblink/detectors/quad/mrtd/MRTDDetectorSettings.html" title="class in com.microblink.detectors.quad.mrtd"><code>MRTDDetectorSettings</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -194,14 +194,14 @@ extends <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;com.microblink.detectors.quad.<a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html" title="class in com.microblink.detectors.quad">QuadDetectorResult</a></h3>
-<code><a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#mDetectionLocation">mDetectionLocation</a></code></li>
+<code><a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#mDetectionLocation">mDetectionLocation</a>, <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#mDisplayLocation">mDisplayLocation</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.com.microblink.detectors.DetectorResult">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;com.microblink.detectors.<a href="../../../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors">DetectorResult</a></h3>
-<code><a href="../../../../../com/microblink/detectors/DetectorResult.html#mDetectionCode">mDetectionCode</a></code></li>
+<code><a href="../../../../../com/microblink/detectors/DetectorResult.html#mDetectionCode">mDetectionCode</a>, <a href="../../../../../com/microblink/detectors/DetectorResult.html#mDetectionStatus">mDetectionStatus</a>, <a href="../../../../../com/microblink/detectors/DetectorResult.html#mTransformMatrix">mTransformMatrix</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.android.os.Parcelable">
@@ -224,8 +224,11 @@ extends <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/microblink/detectors/quad/mrtd/MRTDDetectorResult.html#MRTDDetectorResult-int-com.microblink.geometry.Quadrilateral-float-long-">MRTDDetectorResult</a></span>(int&nbsp;detectionCode,
-                  <a href="../../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;detectionLocation,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../com/microblink/detectors/quad/mrtd/MRTDDetectorResult.html#MRTDDetectorResult-int-int-float:A-float:A-float:A-float-long-">MRTDDetectorResult</a></span>(int&nbsp;detectionCode,
+                  int&nbsp;detectionStatus,
+                  float[]&nbsp;transformMatrix,
+                  float[]&nbsp;detectionLocation,
+                  float[]&nbsp;displayLocation,
                   float&nbsp;confidence,
                   long&nbsp;nativePtr)</code>
 <div class="block">Constructor which uses the given parameters to initialize the object.</div>
@@ -301,14 +304,14 @@ extends <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.microblink.detectors.quad.<a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html" title="class in com.microblink.detectors.quad">QuadDetectorResult</a></h3>
-<code><a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDetectionLocation--">getDetectionLocation</a></code></li>
+<code><a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDetectionLocation--">getDetectionLocation</a>, <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDisplayLocation--">getDisplayLocation</a>, <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getTransformedDetectionLocation--">getTransformedDetectionLocation</a>, <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getTransformedDisplayLocation--">getTransformedDisplayLocation</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.microblink.detectors.DetectorResult">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.microblink.detectors.<a href="../../../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors">DetectorResult</a></h3>
-<code><a href="../../../../../com/microblink/detectors/DetectorResult.html#describeContents--">describeContents</a>, <a href="../../../../../com/microblink/detectors/DetectorResult.html#getDetectionCode--">getDetectionCode</a></code></li>
+<code><a href="../../../../../com/microblink/detectors/DetectorResult.html#describeContents--">describeContents</a>, <a href="../../../../../com/microblink/detectors/DetectorResult.html#getDetectionCode--">getDetectionCode</a>, <a href="../../../../../com/microblink/detectors/DetectorResult.html#getDetectionStatus--">getDetectionStatus</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -349,21 +352,27 @@ extends <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="MRTDDetectorResult-int-com.microblink.geometry.Quadrilateral-float-long-">
+<a name="MRTDDetectorResult-int-int-float:A-float:A-float:A-float-long-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>MRTDDetectorResult</h4>
 <pre>public&nbsp;MRTDDetectorResult(int&nbsp;detectionCode,
-                          <a href="../../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;detectionLocation,
+                          int&nbsp;detectionStatus,
+                          float[]&nbsp;transformMatrix,
+                          float[]&nbsp;detectionLocation,
+                          float[]&nbsp;displayLocation,
                           float&nbsp;confidence,
                           long&nbsp;nativePtr)</pre>
 <div class="block">Constructor which uses the given parameters to initialize the object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>detectionCode</code> - Detection code from native library.</dd>
+<dd><code>detectionStatus</code> - Detection status from native library.</dd>
+<dd><code>transformMatrix</code> - Transformation matrix from native library.</dd>
 <dd><code>detectionLocation</code> - Location of the detection.</dd>
+<dd><code>displayLocation</code> - Display location</dd>
 <dd><code>confidence</code> - Detection confidence.</dd>
 <dd><code>nativePtr</code> - Pointer to native object that holds the detection data.</dd>
 </dl>
@@ -411,7 +420,8 @@ extends <a href="../../../../../com/microblink/detectors/quad/QuadDetectorResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getMRTDDetectionCode</h4>
-<pre>public&nbsp;<a href="../../../../../com/microblink/detectors/quad/mrtd/MRTDDetectorResult.MRTDDetectionCode.html" title="enum in com.microblink.detectors.quad.mrtd">MRTDDetectorResult.MRTDDetectionCode</a>&nbsp;getMRTDDetectionCode()</pre>
+<pre>@Nullable
+public&nbsp;<a href="../../../../../com/microblink/detectors/quad/mrtd/MRTDDetectorResult.MRTDDetectionCode.html" title="enum in com.microblink.detectors.quad.mrtd">MRTDDetectorResult.MRTDDetectionCode</a>&nbsp;getMRTDDetectionCode()</pre>
 <div class="block">Getter for detection code that is specific for results from MRTD detector and holds
  information about detection type.</div>
 <dl>

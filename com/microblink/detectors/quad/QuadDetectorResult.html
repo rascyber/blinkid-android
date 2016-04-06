@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -122,7 +122,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">QuadDetectorResult</span>
 extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors">DetectorResult</a></pre>
-<div class="block">Created by ivan on 12/9/15.</div>
+<div class="block">A detector result represented by quadrilateral.</div>
 </li>
 </ul>
 </div>
@@ -175,13 +175,19 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <div class="block">The detection location.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#mDisplayLocation">mDisplayLocation</a></span></code>
+<div class="block">The detection location modified for display in UI</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.com.microblink.detectors.DetectorResult">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;com.microblink.detectors.<a href="../../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors">DetectorResult</a></h3>
-<code><a href="../../../../com/microblink/detectors/DetectorResult.html#mDetectionCode">mDetectionCode</a></code></li>
+<code><a href="../../../../com/microblink/detectors/DetectorResult.html#mDetectionCode">mDetectionCode</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#mDetectionStatus">mDetectionStatus</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#mTransformMatrix">mTransformMatrix</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.android.os.Parcelable">
@@ -204,8 +210,11 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#QuadDetectorResult-int-com.microblink.geometry.Quadrilateral-">QuadDetectorResult</a></span>(int&nbsp;detectionCode,
-                  <a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;detectionLocation)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#QuadDetectorResult-int-int-float:A-float:A-float:A-">QuadDetectorResult</a></span>(int&nbsp;detectionCode,
+                  int&nbsp;detectionStatus,
+                  float[]&nbsp;transformMatrix,
+                  float[]&nbsp;detectionLocation,
+                  float[]&nbsp;displayLocation)</code>
 <div class="block">Constructor which uses the given parameters to initialize the object.</div>
 </td>
 </tr>
@@ -232,14 +241,32 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDetectionLocation--">getDetectionLocation</a></span>()</code>
-<div class="block">Returns the location of detection.</div>
+<div class="block">Returns the location of detection in coordinate system of image on which detection was performed.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDisplayLocation--">getDisplayLocation</a></span>()</code>
+<div class="block">Returns the display location in coordinate system of image on which detection was performed.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getTransformedDetectionLocation--">getTransformedDetectionLocation</a></span>()</code>
+<div class="block">Returns the location of detection in normalized coordinate system of visible camera frame.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getTransformedDisplayLocation--">getTransformedDisplayLocation</a></span>()</code>
+<div class="block">Returns the display location in normalized coordinate system of visible camera frame.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#writeToParcel-android.os.Parcel-int-">writeToParcel</a></span>(android.os.Parcel&nbsp;dest,
              int&nbsp;flags)</code>&nbsp;</td>
@@ -250,7 +277,7 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.microblink.detectors.<a href="../../../../com/microblink/detectors/DetectorResult.html" title="class in com.microblink.detectors">DetectorResult</a></h3>
-<code><a href="../../../../com/microblink/detectors/DetectorResult.html#describeContents--">describeContents</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionCode--">getDetectionCode</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionCodeName--">getDetectionCodeName</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionCodeOrdinal--">getDetectionCodeOrdinal</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#setDetectionCode-int-">setDetectionCode</a></code></li>
+<code><a href="../../../../com/microblink/detectors/DetectorResult.html#describeContents--">describeContents</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionCode--">getDetectionCode</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionCodeName--">getDetectionCodeName</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionCodeOrdinal--">getDetectionCodeOrdinal</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#getDetectionStatus--">getDetectionStatus</a>, <a href="../../../../com/microblink/detectors/DetectorResult.html#setDetectionCode-int-">setDetectionCode</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -283,6 +310,16 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <div class="block">The detection location.</div>
 </li>
 </ul>
+<a name="mDisplayLocation">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>mDisplayLocation</h4>
+<pre>protected&nbsp;<a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a> mDisplayLocation</pre>
+<div class="block">The detection location modified for display in UI</div>
+</li>
+</ul>
 <a name="CREATOR">
 <!--   -->
 </a>
@@ -301,18 +338,23 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="QuadDetectorResult-int-com.microblink.geometry.Quadrilateral-">
+<a name="QuadDetectorResult-int-int-float:A-float:A-float:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>QuadDetectorResult</h4>
 <pre>public&nbsp;QuadDetectorResult(int&nbsp;detectionCode,
-                          <a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;detectionLocation)</pre>
+                          int&nbsp;detectionStatus,
+                          float[]&nbsp;transformMatrix,
+                          float[]&nbsp;detectionLocation,
+                          float[]&nbsp;displayLocation)</pre>
 <div class="block">Constructor which uses the given parameters to initialize the object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>detectionCode</code> - Detection code from native library.</dd>
+<dd><code>detectionStatus</code> - Detection status from native library.</dd>
+<dd><code>transformMatrix</code> - Transformation matrix from native library.</dd>
 <dd><code>detectionLocation</code> - Location of the detection.</dd>
 </dl>
 </li>
@@ -346,10 +388,67 @@ extends <a href="../../../../com/microblink/detectors/DetectorResult.html" title
 <li class="blockList">
 <h4>getDetectionLocation</h4>
 <pre>public&nbsp;<a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;getDetectionLocation()</pre>
-<div class="block">Returns the location of detection.</div>
+<div class="block">Returns the location of detection in coordinate system of image on which detection was performed.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the location of detection.</dd>
+<dd>the location of detection in coordinate system of image on which detection was performed.</dd>
+</dl>
+</li>
+</ul>
+<a name="getTransformedDetectionLocation--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTransformedDetectionLocation</h4>
+<pre>public&nbsp;<a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;getTransformedDetectionLocation()</pre>
+<div class="block">Returns the location of detection in normalized coordinate system of visible camera frame.
+
+ The normalized coordinate system of visible camera frame is coordinate system whose top left
+ position is at coordinates (0,0), and bottom right is at coordinates (1,1). It is oriented
+ in landscape right orientation.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the location of detection in normalized coordinate system of visible camera frame.</dd>
+</dl>
+</li>
+</ul>
+<a name="getDisplayLocation--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDisplayLocation</h4>
+<pre>public&nbsp;<a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;getDisplayLocation()</pre>
+<div class="block">Returns the display location in coordinate system of image on which detection was performed.
+
+ The display location is usually same as detection location returned with <a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDetectionLocation--"><code>getDetectionLocation()</code></a>,
+ however sometimes it can be different. While detection location is actually used to perform searching
+ of fields that need to be recognised, the display location is usually used for displaying the detection
+ feedback in UI.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the display location in coordinate system of image on which detection was performed.</dd>
+</dl>
+</li>
+</ul>
+<a name="getTransformedDisplayLocation--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getTransformedDisplayLocation</h4>
+<pre>public&nbsp;<a href="../../../../com/microblink/geometry/Quadrilateral.html" title="class in com.microblink.geometry">Quadrilateral</a>&nbsp;getTransformedDisplayLocation()</pre>
+<div class="block">Returns the display location in normalized coordinate system of visible camera frame.
+
+ The normalized coordinate system of visible camera frame is coordinate system whose top left
+ position is at coordinates (0,0), and bottom right is at coordinates (1,1). It is oriented
+ in landscape right orientation.
+
+ For more information about display location, see <a href="../../../../com/microblink/detectors/quad/QuadDetectorResult.html#getDisplayLocation--"><code>getDisplayLocation()</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the display location in normalized coordinate system of visible camera frame.</dd>
 </dl>
 </li>
 </ul>

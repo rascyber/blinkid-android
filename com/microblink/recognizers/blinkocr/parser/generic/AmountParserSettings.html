@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -217,41 +217,65 @@ implements android.os.Parcelable</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#isAsterixOrEqualsPrefixExpected--">isAsterixOrEqualsPrefixExpected</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#areSpaceSeparatorsAllowed--">areSpaceSeparatorsAllowed</a></span>()</code>
+<div class="block">Returns true if amounts with spaces between groups of digits(thousands) are allowed.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#isCurrencyPrefixExpected--">isCurrencyPrefixExpected</a></span>()</code>
-<div class="block">Returns true if currency symbol $ is expected to be found before actual amount.</div>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#getIdealNumberOfDigits--">getIdealNumberOfDigits</a></span>()</code>
+<div class="block">Returns current ideal number of digits before decimal part.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#isAsterixOrEqualsPrefixExpected--">isAsterixOrEqualsPrefixExpected</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#isCurrencySymbolExpected--">isCurrencySymbolExpected</a></span>()</code>
+<div class="block">Returns true if currency symbol is expected to be found before or after the actual amount.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setAllowMissingDecimals-boolean-">setAllowMissingDecimals</a></span>(boolean&nbsp;allowMissingDecimals)</code>
 <div class="block">Sets whether amounts without decimal are accepted as valid amount, for example 1.465 is
  accepted as valid amount.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setAllowNegativeAmounts-boolean-">setAllowNegativeAmounts</a></span>(boolean&nbsp;allowNegativeAmounts)</code>
 <div class="block">Sets whether negative values are accepted as valid amounts, for example -27,56 is
  valid amount.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setAllowSpaceSeparators-boolean-">setAllowSpaceSeparators</a></span>(boolean&nbsp;allowSpaceSeparators)</code>
+<div class="block">Sets whether amounts with space separators between groups of digits(thousands) are allowed.</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setExpectAsterixOrEqualsPrefix-boolean-">setExpectAsterixOrEqualsPrefix</a></span>(boolean&nbsp;expectAsterixOrEqualsPrefix)</code>
 <div class="block">Sets wether * or = is expected to be found before actual amount.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setExpectCurrencyPrefix-boolean-">setExpectCurrencyPrefix</a></span>(boolean&nbsp;expectCurrencyPrefix)</code>
-<div class="block">Sets whether currency symbol $ is expected to be found before actual amount.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setExpectCurrencySymbol-boolean-">setExpectCurrencySymbol</a></span>(boolean&nbsp;expectCurrencySymbol)</code>
+<div class="block">Sets whether currency symbol is expected to be found before or after the actual amount.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#setIdealNumberOfDigits-int-">setIdealNumberOfDigits</a></span>(int&nbsp;idealNumberOfDigits)</code>
+<div class="block">Sets ideal(expected) number of digits.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/microblink/recognizers/blinkocr/parser/generic/AmountParserSettings.html#writeToParcel-android.os.Parcel-int-">writeToParcel</a></span>(android.os.Parcel&nbsp;dest,
              int&nbsp;flags)</code>&nbsp;</td>
@@ -356,6 +380,35 @@ implements android.os.Parcelable</pre>
 </dl>
 </li>
 </ul>
+<a name="setAllowSpaceSeparators-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setAllowSpaceSeparators</h4>
+<pre>public&nbsp;void&nbsp;setAllowSpaceSeparators(boolean&nbsp;allowSpaceSeparators)</pre>
+<div class="block">Sets whether amounts with space separators between groups of digits(thousands) are allowed.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>allowSpaceSeparators</code> - whether or not amounts with spaces between groups
+                             of digits(thousands) are allowed.</dd>
+</dl>
+</li>
+</ul>
+<a name="areSpaceSeparatorsAllowed--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>areSpaceSeparatorsAllowed</h4>
+<pre>public&nbsp;boolean&nbsp;areSpaceSeparatorsAllowed()</pre>
+<div class="block">Returns true if amounts with spaces between groups of digits(thousands) are allowed.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if amounts with spaces between groups of digits(thousands) are allowed.</dd>
+</dl>
+</li>
+</ul>
 <a name="setAllowNegativeAmounts-boolean-">
 <!--   -->
 </a>
@@ -385,32 +438,32 @@ implements android.os.Parcelable</pre>
 </dl>
 </li>
 </ul>
-<a name="setExpectCurrencyPrefix-boolean-">
+<a name="setExpectCurrencySymbol-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setExpectCurrencyPrefix</h4>
-<pre>public&nbsp;void&nbsp;setExpectCurrencyPrefix(boolean&nbsp;expectCurrencyPrefix)</pre>
-<div class="block">Sets whether currency symbol $ is expected to be found before actual amount.
- When it is set to true $11.37 is more preferred than 11.37.</div>
+<h4>setExpectCurrencySymbol</h4>
+<pre>public&nbsp;void&nbsp;setExpectCurrencySymbol(boolean&nbsp;expectCurrencySymbol)</pre>
+<div class="block">Sets whether currency symbol is expected to be found before or after the actual amount.
+ When it is set to true "$11.37" or "11.37 $" is more preferred than 11.37.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>expectCurrencyPrefix</code> - whether or not to expect currency symbol</dd>
+<dd><code>expectCurrencySymbol</code> - whether or not to expect currency symbol</dd>
 </dl>
 </li>
 </ul>
-<a name="isCurrencyPrefixExpected--">
+<a name="isCurrencySymbolExpected--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>isCurrencyPrefixExpected</h4>
-<pre>public&nbsp;boolean&nbsp;isCurrencyPrefixExpected()</pre>
-<div class="block">Returns true if currency symbol $ is expected to be found before actual amount.</div>
+<h4>isCurrencySymbolExpected</h4>
+<pre>public&nbsp;boolean&nbsp;isCurrencySymbolExpected()</pre>
+<div class="block">Returns true if currency symbol is expected to be found before or after the actual amount.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if currency symbol $ is expected to be found before actual amount.</dd>
+<dd>true if currency symbol is expected to be found before or after the actual amount.</dd>
 </dl>
 </li>
 </ul>
@@ -436,6 +489,35 @@ implements android.os.Parcelable</pre>
 <li class="blockList">
 <h4>isAsterixOrEqualsPrefixExpected</h4>
 <pre>public&nbsp;boolean&nbsp;isAsterixOrEqualsPrefixExpected()</pre>
+</li>
+</ul>
+<a name="setIdealNumberOfDigits-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setIdealNumberOfDigits</h4>
+<pre>public&nbsp;void&nbsp;setIdealNumberOfDigits(int&nbsp;idealNumberOfDigits)</pre>
+<div class="block">Sets ideal(expected) number of digits. When it is set, amounts with numbers of digits
+ (before decimal part) that are closer to chosen ideal number are preferred.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>idealNumberOfDigits</code> - ideal(expected) number of digits before decimal part.</dd>
+</dl>
+</li>
+</ul>
+<a name="getIdealNumberOfDigits--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getIdealNumberOfDigits</h4>
+<pre>public&nbsp;int&nbsp;getIdealNumberOfDigits()</pre>
+<div class="block">Returns current ideal number of digits before decimal part.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Current ideal number of digits before decimal part.</dd>
+</dl>
 </li>
 </ul>
 <a name="writeToParcel-android.os.Parcel-int-">

@@ -356,7 +356,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getPrimaryId</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getPrimaryId()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getPrimaryId()</pre>
 <div class="block">Returns the primary indentifier. If there is more than one component, they are separated with space.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -370,7 +371,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getSecondaryId</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getSecondaryId()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getSecondaryId()</pre>
 <div class="block">Returns the secondary identifier. If there is more than one component, they are separated with space.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -384,7 +386,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getIssuer</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getIssuer()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getIssuer()</pre>
 <div class="block">Returns three-letter or two-letter code which indicate the issuing State. Three-letter codes are based
  on Aplha-3 codes for entities specified in ISO 3166-1, with extensions for certain States. Two-letter
  codes are based on Aplha-2 codes for entities specified in ISO 3166-1, with extensions for certain States.</div>
@@ -400,7 +403,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getDateOfBirth</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getDateOfBirth()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getDateOfBirth()</pre>
 <div class="block">Returns holder's date of birth in format <code>YYMMDD</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -414,7 +418,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getDocumentNumber</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getDocumentNumber()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getDocumentNumber()</pre>
 <div class="block">Returns document number. Document number contains up to 9 characters.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -428,7 +433,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getNationality</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getNationality()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getNationality()</pre>
 <div class="block">Returns nationality of the holder represented by a three-letter or two-letter code. Three-letter
  codes are based on Alpha-3 codes for entities specified in ISO 3166-1, with extensions for certain
  States. Two-letter codes are based on Aplha-2 codes for entities specified in ISO 3166-1, with
@@ -445,7 +451,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getSex</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getSex()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getSex()</pre>
 <div class="block">Returns sex of the card holder. Sex is specified by use of the single initial, capital letter F for female,
  M for male or <code>&lt;</code> for unspecified.</div>
 <dl>
@@ -460,7 +467,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getDocumentCode</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getDocumentCode()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getDocumentCode()</pre>
 <div class="block">Returns document code. Document code contains two characters. For MRTD the first character shall
  be A, C or I. The second character shall be discretion of the issuing State or organization except
  that V shall not be used, and `C` shall not be used after `A` except in the crew member certificate.
@@ -480,7 +488,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getDateOfExpiry</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getDateOfExpiry()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getDateOfExpiry()</pre>
 <div class="block">Returns date of expiry of the document in format <code>YYMMDD</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -494,7 +503,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getOpt1</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getOpt1()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getOpt1()</pre>
 <div class="block">Returns first optional data. Returns <code>null</code> or empty string if not available.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -508,7 +518,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getOpt2</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getOpt2()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getOpt2()</pre>
 <div class="block">Returns second optional data. Returns <code>null</code> or empty string if not available.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -522,7 +533,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getMRZText</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getMRZText()</pre>
+<pre>@Nullable
+public&nbsp;java.lang.String&nbsp;getMRZText()</pre>
 <div class="block">Returns the entire Machine Readable Zone text from ID. This text is usually used for parsing
  other elements.
  NOTE: This string is available only if OCR result was parsed successfully. If you are just
@@ -540,7 +552,8 @@ extends <a href="../../../../../com/microblink/recognizers/BaseRecognitionResult
 <ul class="blockList">
 <li class="blockList">
 <h4>getOcrResult</h4>
-<pre>public&nbsp;<a href="../../../../../com/microblink/results/ocr/OcrResult.html" title="class in com.microblink.results.ocr">OcrResult</a>&nbsp;getOcrResult()</pre>
+<pre>@Nullable
+public&nbsp;<a href="../../../../../com/microblink/results/ocr/OcrResult.html" title="class in com.microblink.results.ocr">OcrResult</a>&nbsp;getOcrResult()</pre>
 <div class="block">Returns the raw OCR result that was used for parsing data. Depending on settings, this field
  might exist even if other fields are empty.</div>
 <dl>

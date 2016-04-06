@@ -376,6 +376,7 @@ implements android.os.Parcelable</pre>
 <li class="blockList">
 <h4>DocumentSpecification</h4>
 <pre>public&nbsp;DocumentSpecification(double&nbsp;aspectRatio,
+                             @NonNull
                              <a href="../../../../com/microblink/detectors/DecodingInfo.html" title="class in com.microblink.detectors">DecodingInfo</a>[]&nbsp;decodingInfos)</pre>
 <div class="block">Constructor, defines aspect ratio of document that needs to be detected and array of decoding infos
  that control how detection will be dewarped.</div>
@@ -669,7 +670,8 @@ implements android.os.Parcelable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDecodingInfos</h4>
-<pre>public&nbsp;void&nbsp;setDecodingInfos(<a href="../../../../com/microblink/detectors/DecodingInfo.html" title="class in com.microblink.detectors">DecodingInfo</a>[]&nbsp;decodingInfos)</pre>
+<pre>public&nbsp;void&nbsp;setDecodingInfos(@NonNull
+                             <a href="../../../../com/microblink/detectors/DecodingInfo.html" title="class in com.microblink.detectors">DecodingInfo</a>[]&nbsp;decodingInfos)</pre>
 <div class="block">Sets the array of decoding infos that control how detection will be dewarped.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -683,7 +685,8 @@ implements android.os.Parcelable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>createFromPreset</h4>
-<pre>public static&nbsp;<a href="../../../../com/microblink/detectors/document/DocumentSpecification.html" title="class in com.microblink.detectors.document">DocumentSpecification</a>&nbsp;createFromPreset(<a href="../../../../com/microblink/detectors/document/DocumentSpecificationPreset.html" title="enum in com.microblink.detectors.document">DocumentSpecificationPreset</a>&nbsp;preset)</pre>
+<pre>public static&nbsp;<a href="../../../../com/microblink/detectors/document/DocumentSpecification.html" title="class in com.microblink.detectors.document">DocumentSpecification</a>&nbsp;createFromPreset(@NonNull
+                                                     <a href="../../../../com/microblink/detectors/document/DocumentSpecificationPreset.html" title="enum in com.microblink.detectors.document">DocumentSpecificationPreset</a>&nbsp;preset)</pre>
 <div class="block">Creates a new document that will be detected from preset.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
