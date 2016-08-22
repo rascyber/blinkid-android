@@ -31,9 +31,13 @@ com.microblink.recognizers.blinkid.croatia.front
 com.microblink.recognizers.blinkid.czechia.back
 com.microblink.recognizers.blinkid.czechia.front
 com.microblink.recognizers.blinkid.eudl
+com.microblink.recognizers.blinkid.germany.front
+com.microblink.recognizers.blinkid.germany.mrz
 com.microblink.recognizers.blinkid.malaysia
 com.microblink.recognizers.blinkid.mrtd
 com.microblink.recognizers.blinkid.singapore
+com.microblink.recognizers.blinkid.slovakia.back
+com.microblink.recognizers.blinkid.slovakia.front
 com.microblink.recognizers.blinkocr
 com.microblink.recognizers.blinkocr.engine
 com.microblink.recognizers.blinkocr.parser
